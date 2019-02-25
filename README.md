@@ -1,0 +1,2 @@
+# boxstarter
+OS configuration template
