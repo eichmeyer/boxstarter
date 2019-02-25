@@ -7,7 +7,7 @@
 # NOTE the "." above is required.
 #
 # Run this boxstarter by calling the following from **elevated** powershell:
-#   example: Install-BoxstarterPackage -PackageName https://gist.githubusercontent.com/ghostinthewires/033276015ba9d58d1f162e7fd47cdbd3/raw/boxstarter.ps1 -DisableReboots
+#   example: Install-BoxstarterPackage -PackageName  https://gist.githubusercontent.com/eichmeyer/8f1e094560f5e074d20c24c0376bddef/raw/234c3c8f3bd5928ce2ec0a8bb3cc948cd3d6a60f/boxstarter.ps1 -DisableReboots
 # Learn more: http://boxstarter.org/Learn/WebLauncher
 
 Update-ExecutionPolicy -Policy RemoteSigned
