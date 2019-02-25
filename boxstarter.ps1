@@ -7,7 +7,7 @@
 # NOTE the "." above is required.
 #
 # Run this boxstarter by calling the following from **elevated** powershell:
-#   example: Install-BoxstarterPackage -PackageName  https://gist.githubusercontent.com/eichmeyer/8f1e094560f5e074d20c24c0376bddef/raw/234c3c8f3bd5928ce2ec0a8bb3cc948cd3d6a60f/boxstarter.ps1 -DisableReboots
+#   example: Install-BoxstarterPackage -PackageName  https://raw.githubusercontent.com/eichmeyer/boxstarter/master/boxstarter.ps1 -DisableReboots
 # Learn more: http://boxstarter.org/Learn/WebLauncher
 
 Update-ExecutionPolicy -Policy RemoteSigned
@@ -86,7 +86,7 @@ Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\
 #Set-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization -Name NoLockScreen -Type DWord -Value 1
 
 # Lock screen (not sleep) on lid close
-#Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power' -Name AwayModeEnabled -Type DWord -Value 1
+Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power' -Name AwayModeEnabled -Type DWord -Value 1
 
 # Use the Windows 7-8.1 Style Volume Mixer
 #If (-Not (Test-Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\MTCUVC")) {
@@ -386,7 +386,7 @@ cup du --cacheLocation $ChocoCachePath
 ##cup openssl.light --cacheLocation $ChocoCachePath
 
 #Install SQL Tools
-cup sql-server-management-studio --cacheLocation $ChocoCachePath
+#cup sql-server-management-studio --cacheLocation $ChocoCachePath
 
 # Install Troubleshooting Tools
 #cup wireshark --cacheLocation $ChocoCachePath
