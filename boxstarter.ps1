@@ -357,7 +357,7 @@ Install-Module -Name Azure -Scope AllUsers -AllowClobber
 #cup conemu --cacheLocation $ChocoCachePath
 
 # Install File Tools
-cup notepadplusplus --cacheLocation $ChocoCachePath
+#cup notepadplusplus --cacheLocation $ChocoCachePath
 #cup winmerge --cacheLocation $ChocoCachePath
 #cup agentransack --cacheLocation $ChocoCachePath
 #cup ditto --cacheLocation $ChocoCachePath
