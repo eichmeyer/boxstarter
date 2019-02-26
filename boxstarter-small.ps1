@@ -235,7 +235,25 @@ cup git-credential-manager-for-windows --cacheLocation $ChocoCachePath
 Install-Module -Name AzureRM -Scope AllUsers
 Install-Module -Name Azure -Scope AllUsers -AllowClobber
 
+####################
+# Visual Studio Code
+####################
 
+# Install Visual Studio Code
+cup visualstudiocode --cacheLocation $ChocoCachePath
+
+# Install Visual Studio Code Extensions
+
+code --install-extension ms-vscode.csharp
+code --install-extension ms-vscode.PowerShell
+code --install-extension ms-vscode.azurecli
+code --install-extension ms-azuretools.vscode-azurefunctions
+code --install-extension ms-mssql.mssql
+code --install-extension mindginative.terraform-snippets
+code --install-extension mauve.terraform
+code --install-extension ipedrazas.kubernetes-snippets
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+code --install-extension emilast.LogFileHighlighter
 
 #######
 # Tools
