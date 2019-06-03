@@ -5,4 +5,4 @@ Run this Boxstarter by calling the following from an **ELEVATED PowerShell insta
 
      set-executionpolicy Unrestricted
      . { iwr -useb https://boxstarter.org/bootstrapper.ps1 } | iex; get-boxstarter -Force
-     Install-BoxstarterPackage -DisableReboots -PackageName https://github.com/eichmeyer/boxstarter/blob/master/boxstarter.ps1
+     Install-BoxstarterPackage -DisableReboots -PackageName https://github.com/eichmeyer/boxstarter/master/boxstarter.ps1
