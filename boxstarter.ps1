@@ -49,7 +49,7 @@ Set-ItemProperty -Path HKLM:\Software\Microsoft\PolicyManager\default\WiFi\Allow
 Set-ItemProperty -Path HKLM:\Software\Microsoft\PolicyManager\default\WiFi\AllowAutoConnectToWiFiSenseHotspots -Name value -Type DWord -Value 0
 
 # Start Menu: Disable Bing Search Results
-Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search -Name BingSearchEnabled -Type DWord -Value 0
+#Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search -Name BingSearchEnabled -Type DWord -Value 0
 
 # Start Menu: Disable Cortana 
 #New-Item -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows' -Name 'Windows Search' -ItemType Key
@@ -69,9 +69,9 @@ Set-TaskbarOptions -Size Small -Dock Bottom -Combine Full -Lock
 #Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name LaunchTo -Type DWord -Value 1
 
 # Better File Explorer
-Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name NavPaneExpandToCurrentFolder -Value 1		
-Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name NavPaneShowAllFolders -Value 1		
-Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name MMTaskbarMode -Value 2
+#Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name NavPaneExpandToCurrentFolder -Value 1		
+#Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name NavPaneShowAllFolders -Value 1		
+#Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name MMTaskbarMode -Value 2
 
 # These make "Quick Access" behave much closer to the old "Favorites"
 # Disable Quick Access: Recent Files
@@ -86,7 +86,7 @@ Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\
 #Set-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization -Name NoLockScreen -Type DWord -Value 1
 
 # Lock screen (not sleep) on lid close
-Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power' -Name AwayModeEnabled -Type DWord -Value 1
+#Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power' -Name AwayModeEnabled -Type DWord -Value 1
 
 # Use the Windows 7-8.1 Style Volume Mixer
 #If (-Not (Test-Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\MTCUVC")) {
@@ -95,8 +95,8 @@ Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\P
 #Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\MTCUVC" -Name EnableMtcUvc -Type DWord -Value 0
 
 # Disable Xbox Gamebar
-Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" -Name AppCaptureEnabled -Type DWord -Value 0
-Set-ItemProperty -Path "HKCU:\System\GameConfigStore" -Name GameDVR_Enabled -Type DWord -Value 0
+#Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" -Name AppCaptureEnabled -Type DWord -Value 0
+#Set-ItemProperty -Path "HKCU:\System\GameConfigStore" -Name GameDVR_Enabled -Type DWord -Value 0
 
 # Turn off People in Taskbar
 If (-Not (Test-Path "HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People")) {
@@ -160,7 +160,7 @@ Get-AppxPackage *Keeper* | Remove-AppxPackage
 #Get-AppxPackage microsoft.windowscommunicationsapps | Remove-AppxPackage
 
 # Maps
-Get-AppxPackage Microsoft.WindowsMaps | Remove-AppxPackage
+#Get-AppxPackage Microsoft.WindowsMaps | Remove-AppxPackage
 
 # March of Empires
 Get-AppxPackage *MarchofEmpires* | Remove-AppxPackage
@@ -183,7 +183,7 @@ Get-AppxPackage Microsoft.Messaging | Remove-AppxPackage
 Get-AppxPackage *Minecraft* | Remove-AppxPackage
 
 # Netflix
-Get-AppxPackage *Netflix* | Remove-AppxPackage
+#Get-AppxPackage *Netflix* | Remove-AppxPackage
 
 # Office Hub
 #Get-AppxPackage Microsoft.MicrosoftOfficeHub | Remove-AppxPackage
@@ -219,7 +219,7 @@ Get-AppxPackage *Solitaire* | Remove-AppxPackage
 #Get-AppxPackage Microsoft.MicrosoftStickyNotes | Remove-AppxPackage
 
 # Sway
-Get-AppxPackage Microsoft.Office.Sway | Remove-AppxPackage
+#Get-AppxPackage Microsoft.Office.Sway | Remove-AppxPackage
 
 # Twitter
 #Get-AppxPackage *Twitter* | Remove-AppxPackage
@@ -240,13 +240,13 @@ Get-AppxPackage MMicrosoft.DesktopAppInstaller | Remove-AppxPackage
 Get-AppxPackage Microsoft.MixedReality.Portal | Remove-AppxPackage
 
 # Xbox
-Get-AppxPackage Microsoft.XboxApp | Remove-AppxPackage
-Get-AppxPackage Microsoft.XboxIdentityProvider | Remove-AppxPackage
-Get-AppxPackage Microsoft.Xbox.TCUI | Remove-AppxPackage
-Get-AppxPackage Microsoft.XboxGameOverlay | Remove-AppxPackage
+#Get-AppxPackage Microsoft.XboxApp | Remove-AppxPackage
+#Get-AppxPackage Microsoft.XboxIdentityProvider | Remove-AppxPackage
+#Get-AppxPackage Microsoft.Xbox.TCUI | Remove-AppxPackage
+#Get-AppxPackage Microsoft.XboxGameOverlay | Remove-AppxPackage
 
 # Zune Music, Movies & TV
-#Get-AppxPackage Microsoft.ZuneMusic | Remove-AppxPackage
+Get-AppxPackage Microsoft.ZuneMusic | Remove-AppxPackage
 #Get-AppxPackage Microsoft.ZuneVideo | Remove-AppxPackage
 
 ###################################
@@ -310,7 +310,7 @@ cup azcopy --cacheLocation $ChocoCachePath
 
 # Install git & git credential manager
 cup git --cacheLocation $ChocoCachePath
-cup git-credential-manager-for-windows --cacheLocation $ChocoCachePath
+#cup git-credential-manager-for-windows --cacheLocation $ChocoCachePath
 
 # Install Gitkraken
 #cup gitkraken --cacheLocation $ChocoCachePath
